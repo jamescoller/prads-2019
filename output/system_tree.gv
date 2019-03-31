@@ -1,0 +1,34 @@
+// Launch and Recovery Infulence Diagram
+digraph {
+	system [label="L/R System" shape=box]
+	sys_req [label="System\nRequirements"]
+	imp [label="Arrangement\nImpact"]
+	man_req [label="Required\nManning"]
+	fbd_flex [label="Freeboard\nFlexibility"]
+	rel_height [label="Relative\nHeight"]
+	simplicity [label="Simplicity of L/R"]
+	rated_cap [label="Rated\nLifting\nCapacity"]
+	actual_cap [label="Actual\nLifting\nCapacity"]
+	sat_a [label="Arrangement\nFlexibility\nSatisfaction" shape=diamond]
+	sat_m [label="Manning\nSatisfaction" shape=diamond]
+	sat_f [label="Freeboard\nSatisfaction" shape=diamond]
+	sat_p [label="Performance\nSatisfaction" shape=diamond]
+	sat [label="Overall Satisfaction" shape=hexagon]
+	system -> sys_req
+	system -> fbd_flex
+	system -> rel_height
+	system -> rated_cap
+	sys_req -> imp
+	sys_req -> man_req
+	rel_height -> simplicity
+	rated_cap -> actual_cap
+	imp -> sat_a
+	fbd_flex -> sat_f
+	man_req -> sat_m
+	simplicity -> sat_p
+	actual_cap -> sat_p
+	sat_a -> sat
+	sat_m -> sat
+	sat_f -> sat
+	sat_p -> sat
+}

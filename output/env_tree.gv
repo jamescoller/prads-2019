@@ -1,0 +1,34 @@
+// Launch and Recovery Infulence Diagram
+digraph {
+	env [label=Environment shape=box]
+	ss [label="Sea State"]
+	wind [label=Wind]
+	fbd_avail [label="Available\nFreeboard"]
+	man_avail [label="Available\nManning"]
+	man_req [label="Required\nManning"]
+	actual_cap [label="Actual\nLifting\nCapacity"]
+	man_req [label="Required Manning"]
+	sat_p [label="Performance\nSatisfaction" shape=diamond]
+	sat_m [label="Manning\nSatisfaction" shape=diamond]
+	sat_f [label="Freeboard\nSatisfaction" shape=diamond]
+	sat [label="Overall Satisfaction" shape=hexagon]
+	env -> ss
+	env -> wind
+	ss -> man_avail
+	ss -> man_req
+	ss -> simplicity
+	ss -> actual_cap
+	ss -> fbd_avail
+	wind -> man_avail
+	wind -> man_req
+	wind -> simplicity
+	wind -> actual_cap
+	man_avail -> sat_m
+	man_req -> sat_m
+	simplicity -> sat_p
+	actual_cap -> sat_p
+	fbd_avail -> sat_f
+	sat_m -> sat
+	sat_f -> sat
+	sat_p -> sat
+}

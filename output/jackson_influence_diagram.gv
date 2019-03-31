@@ -1,0 +1,66 @@
+// Launch and Recovery Influence Diagram
+digraph {
+	1 [label="Host Vessel" shape=box]
+	2 [label=AUV shape=box]
+	3 [label="L/R System" shape=box]
+	4 [label=ENV shape=box]
+	5 [label="Minimum Freeboard"]
+	6 [label="Crew Size"]
+	7 [label="Arrangement Flexibility"]
+	8 [label="Available Manning"]
+	9 [label="Vehicle Volume"]
+	10 [label="Vehicle Weight"]
+	11 [label="Variability of Vehicle Type"]
+	12 [label="Arrangement Impact"]
+	13 [label="Freeboard Flexibility"]
+	14 [label="Required Manning"]
+	15 [label="Proximity to Water"]
+	16 [label="Simplicity of Recovery"]
+	17 [label="Sea State"]
+	18 [label="Rated Lifting Capacity"]
+	19 [label="Actual Lifting Capacity"]
+	20 [label="Flexibility of Recovery"]
+	21 [label="Arrangement Flexibility Satisfaction" shape=diamond]
+	22 [label="Manning Satisfaction" shape=diamond]
+	23 [label="Freeboard Satisfaction" shape=diamond]
+	24 [label="Recovery Satisfaction" shape=diamond]
+	25 [label="Vehicle Interoperability Satisfaction" shape=diamond]
+	26 [label=Satisfaction shape=hexagon]
+	1 -> 7
+	1 -> 6
+	1 -> 5
+	7 -> 21
+	6 -> 8
+	8 -> 22
+	5 -> 23
+	21 -> 26
+	22 -> 26
+	23 -> 26
+	2 -> 9
+	2 -> 11
+	2 -> 10
+	10 -> 24
+	9 -> 12
+	11 -> 25
+	10 -> 14
+	12 -> 21
+	3 -> 12
+	3 -> 13
+	3 -> 14
+	3 -> 15
+	3 -> 18
+	3 -> 20
+	15 -> 16
+	16 -> 24
+	24 -> 26
+	14 -> 22
+	4 -> 17
+	17 -> 8
+	17 -> 14
+	17 -> 16
+	17 -> 19
+	18 -> 19
+	20 -> 25
+	25 -> 26
+	13 -> 23
+}

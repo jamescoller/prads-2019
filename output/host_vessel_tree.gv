@@ -1,0 +1,22 @@
+// Launch and Recovery Infulence Diagram
+digraph {
+	host [label="Host Vessel" shape=box]
+	fbd_min [label="Minimum\nFreeboard"]
+	size_crew [label="Crew Size"]
+	arr_flex [label="Arrangement\nFlexibility"]
+	man_avail [label="Available\nManning"]
+	sat_a [label="Arrangement\nFlexibility\nSatisfaction" shape=diamond]
+	sat_m [label="Manning\nSatisfaction" shape=diamond]
+	sat_f [label="Freeboard\nSatisfaction" shape=diamond]
+	sat [label="Overall Satisfaction" shape=hexagon]
+	host -> arr_flex
+	host -> size_crew
+	host -> fbd_min
+	arr_flex -> sat_a
+	size_crew -> man_avail
+	man_avail -> sat_m
+	fbd_min -> sat_f
+	sat_a -> sat
+	sat_m -> sat
+	sat_f -> sat
+}

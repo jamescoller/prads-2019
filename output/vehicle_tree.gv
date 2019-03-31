@@ -1,0 +1,34 @@
+// Launch and Recovery Infulence Diagram
+digraph {
+	vehicle [label=Vehicle shape=box]
+	vol [label="Vehicle\nVolume"]
+	weight [label="Vehicle\nWeight"]
+	var [label="Variability of\nVehicle Type"]
+	flex [label="L/R Flexibility"]
+	cmplx [label="Vehicle\nComplexity"]
+	imp [label="Arrangement Impact"]
+	man_req [label="Required Manning"]
+	sat_a [label="Arrangement\nFlexibility\nSatisfaction" shape=diamond]
+	sat_m [label="Manning\nSatisfaction" shape=diamond]
+	sat_p [label="Performance\nSatisfaction" shape=diamond]
+	sat_i [label="Vehicle\nInteroperability\nSatisfaction" shape=diamond]
+	sat [label="Overall Satisfaction" shape=hexagon]
+	vehicle -> vol
+	vehicle -> weight
+	vehicle -> var
+	vehicle -> flex
+	vehicle -> cmplx
+	vol -> imp
+	weight -> man_req
+	cmplx -> man_req
+	imp -> sat_a
+	man_req -> sat_m
+	var -> sat_i
+	flex -> sat_i
+	weight -> sat_p
+	cmplx -> sat_p
+	sat_a -> sat
+	sat_m -> sat
+	sat_i -> sat
+	sat_p -> sat
+}
