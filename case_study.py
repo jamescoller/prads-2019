@@ -51,7 +51,7 @@ ss6 = Environment('SS6',6,6)
 # Vehicle: (self,name,volume,weight,variability,flexibility,complexity)
 veh1 = Vehicle('UUV',0.5,0.1,2,2,4)
 veh2 = Vehicle('MRHIB',10,5,4,3,2)
-veh3 = Vehicle('HRHIB',15,10,4,5,3)
+veh3 = Vehicle('HRHIB',15,10,4,5,4)
 
 # Set up Variable Vectors
 sat = []
@@ -193,7 +193,3 @@ plt.ylabel(r'P($\theta$)')
 plt.ylim(0, 1)
 plt.grid()
 plt.savefig('output/case_study_6.png',format='png')
-
-print(difference)
-print(max(sat[9:18]))
-print(max(sat[36:45]))
