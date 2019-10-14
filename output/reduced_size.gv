@@ -1,0 +1,33 @@
+// Launch and Recovery Infulence Diagram
+digraph {
+	ratio=0.5
+	host [label="Host Vessel" shape=box]
+	vehicle [label=Vehicle shape=box]
+	system [label="L/R System" shape=box]
+	env [label=Environment shape=box]
+	sat_a [label="Arrangement\nFlexibility\nSatisfaction" shape=diamond]
+	sat_m [label="Manning\nSatisfaction" shape=diamond]
+	sat_f [label="Freeboard\nSatisfaction" shape=diamond]
+	sat_p [label="Performance\nSatisfaction" shape=diamond]
+	sat_i [label="Vehicle\nInteroperability\nSatisfaction" shape=diamond]
+	sat [label="Overall Satisfaction" shape=hexagon]
+	host -> sat_f
+	host -> sat_a
+	host -> sat_m
+	env -> sat_f
+	env -> sat_m
+	env -> sat_p
+	system -> sat_f
+	system -> sat_p
+	system -> sat_a
+	system -> sat_m
+	vehicle -> sat_a
+	vehicle -> sat_m
+	vehicle -> sat_p
+	vehicle -> sat_i
+	sat_a -> sat
+	sat_m -> sat
+	sat_f -> sat
+	sat_i -> sat
+	sat_p -> sat
+}

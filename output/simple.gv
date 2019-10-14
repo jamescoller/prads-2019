@@ -1,0 +1,11 @@
+// Simple Network
+digraph {
+	ratio=0.5
+	first [label=System shape=box]
+	second [label="Intermediate Variables"]
+	third [label="Intermediate Satisfactions" shape=diamond]
+	fourth [label="Aggregate Output" shape=hexagon]
+	first -> second
+	second -> third
+	third -> fourth
+}

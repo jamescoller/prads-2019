@@ -50,7 +50,7 @@ whole.node('env','Environment',shape = 'box')
 colored.node('host','Host Vessel', shape = 'box')
 colored.node('vehicle', 'Vehicle',shape = 'box', style='filled', color='gold')
 colored.node('system','L/R System',shape = 'box')
-colored.node('env','Environment',shape = 'box', style='filled', color='deepskyblue')
+colored.node('env','Environment',shape = 'box', style='filled', color='   ')
 
 host.node('host','Host Vessel', shape = 'box')
 vehicle.node('vehicle', 'Vehicle',shape = 'box')
